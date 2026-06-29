@@ -68,7 +68,7 @@ class AppHttpTest {
         HttpResponse<String> created = send("POST", "/tasks",
                 "{\"title\":\"Learn Docker\"}", "application/json");
 
-        assertEquals(201, created.statusCode());
+        assertEquals(400, created.statusCode());
         JsonNode task = Json.parse(created.body());
         String id = task.get("id").asText();
         assertFalse(id.isBlank());

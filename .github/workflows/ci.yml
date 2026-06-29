@@ -65,3 +65,5 @@ jobs:
         # Context is the repo root; the Dockerfile lives under docker/. Target
         # linux/amd64 (the EC2 deploy architecture).
         run: docker build --platform linux/amd64 -f docker/Dockerfile -t tasks-api:ci .
+
+        #"my CI configuration"
